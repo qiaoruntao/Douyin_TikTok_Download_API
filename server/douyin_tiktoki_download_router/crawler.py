@@ -7,6 +7,9 @@ from crawlers.douyin.web.web_crawler import DouyinWebCrawler
 
 
 class CustomDouyinCrawler(DouyinWebCrawler):
+    def __init__(self):
+        pass
+
     async def fetch_follow_live(self):
         kwargs = await self.get_douyin_headers()
         base_crawler = BaseCrawler(proxies=kwargs["proxies"], crawler_headers=kwargs["headers"])
