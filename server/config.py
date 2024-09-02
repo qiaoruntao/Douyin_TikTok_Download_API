@@ -45,6 +45,7 @@ async def handle_single_change_stream():
 
 
 def override_douyin_download_api_config(config):
+    config["TokenManager"]["douyin"]["headers"]["Cookie"] = config["cookieStr"]
     crawlers.douyin.web.utils.config = config
     crawlers.douyin.web.web_crawler.config = config
 
