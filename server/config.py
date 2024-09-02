@@ -14,6 +14,12 @@ print(hostname)
 
 
 async def manage_config():
+    while True:
+        await handle_single_change_stream()
+        await asyncio.sleep(10)
+
+
+async def handle_single_change_stream():
     client = AsyncIOMotorClient(os.environ['MongoDbConfigStr'])
     print("client connected")
     change_stream = client.MConfig.DouYinWeb.watch([{
@@ -22,7 +28,7 @@ async def manage_config():
             'fullDocument.key': {'$eq': hostname},
         }
     }], full_document="updateLookup")
-    print("watching")
+    print("start watching config")
     global custom_config
     document = await client.MConfig.DouYinWeb.find_one({'key': {'$eq': hostname}})
     if document is None:
@@ -35,6 +41,7 @@ async def manage_config():
         print(change)
         custom_config = change['fullDocument']['data']
         override_douyin_download_api_config(custom_config)
+    print("change stream ends")
 
 
 def override_douyin_download_api_config(config):
