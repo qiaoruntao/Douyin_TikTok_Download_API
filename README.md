@@ -31,6 +31,32 @@
 
 </div>
 
+## 赞助商
+
+这些赞助商已付费放置在这里，**Douyin_TikTok_Download_API** 项目将永远免费且开源。如果您希望成为该项目的赞助商，请查看我的 [GitHub 赞助商页面](https://github.com/sponsors/evil0ctal)。
+
+<div align="center">
+    <a href="https://www.tikhub.io/" target="_blank">
+        <img src="https://tikhub.io/wp-content/uploads/2024/11/Main-Logo.webp" width="100" alt="TikHub.io - Global Social Data & API Marketplace">
+    </a>
+    <div>
+        <h2><b>TikHub.io</b></h2>
+        <p>Your Ultimate Social Media Data & API Marketplace</p>
+        <p>
+            Professional data solutions for Douyin, Xiaohongshu, TikTok, Instagram, YouTube, 
+            Twitter, and more.<br>
+            Real-time Data | Flexible APIs | Seamless Integration | Competitive Pricing with Discounts
+        </p>
+        <p>
+            <b>Discover TikHub.io Marketplace</b><br>
+            Buy and sell custom APIs, services, and social media solutions.<br>
+            Join a thriving ecosystem of developers, businesses, and content creators.
+        </p>
+        <p><em>Trusted by leading global influencer marketing and social media intelligence platforms</em></p>
+    </div>
+</div>
+
+
 ## 👻介绍
 
 > 🚨如需使用私有服务器运行本项目，请参考：[部署准备工作](./README.md#%EF%B8%8F%E9%83%A8%E7%BD%B2%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%E8%AF%B7%E4%BB%94%E7%BB%86%E9%98%85%E8%AF%BB), [Docker部署](./README.md#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E4%BA%8C-docker), [一键部署](./README.md#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E4%B8%80-linux)
@@ -129,13 +155,15 @@ TikHub的部分源代码会开源在Github上，并且会赞助一些开源项�
 │  └─web
 │      └─views
 └─crawlers
-├─douyin
-│  └─web
-├─hybrid
-├─tiktok
-│  ├─app
-│  └─web
-└─utils
+  ├─bilibili
+  │  └─web  
+  ├─douyin
+  │  └─web
+  ├─hybrid
+  ├─tiktok
+  │  ├─app
+  │  └─web
+  └─utils
 ```
 
 ## ✨支持功能：
@@ -192,7 +220,23 @@ TikHub的部分源代码会开源在Github上，并且会赞助一些开源项�
     - [x] 提取列表作品id
     - [x] 获取用户unique_id
     - [x] 获取列表unique_id
-
+  - 哔哩哔哩网页版API
+    - [x] 获取单个视频详情信息
+    - [x] 获取视频流地址
+    - [x] 获取用户发布视频作品数据
+    - [x] 获取用户所有收藏夹信息
+    - [x] 获取指定收藏夹内视频数据
+    - [x] 获取指定用户的信息
+    - [x] 获取综合热门视频信息
+    - [x] 获取指定视频的评论
+    - [x] 获取视频下指定评论的回复
+    - [x] 获取指定用户动态
+    - [x] 获取视频实时弹幕
+    - [x] 获取指定直播间信息
+    - [x] 获取直播间视频流
+    - [x] 获取指定分区正在直播的主播
+    - [x] 获取所有直播分区列表
+    - [x] 通过bv号获得视频分p信息
 ---
 
 ## 📦调用解析库（已废弃需要更新）:
